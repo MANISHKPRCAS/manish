@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+
+        .search-container {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 350px;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="search-container">
+    <h2>Search</h2>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input
+            type="text"
+            name="search_query"
+            placeholder="Type something..."
+            required
+        >
+        <button type="submit">Search</button>
+    </form>
+
+    <p style="font-size:12px;color:#666;margin-top:10px;">
+        Submitted searches are sent to the site owner.
+    </p>
+</div>
+
+</body>
+</html>
