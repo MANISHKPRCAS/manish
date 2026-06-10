@@ -1,102 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>College Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPRCAS Login</title>
+    <style>
+        /* Reset and basic styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
+        body {
+            background: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    body {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #004080, #0080ff);
-    }
+        /* Center Card Container */
+        .login-container {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
 
-    .login-container {
-        width: 350px;
-        background: white;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        text-align: center;
-    }
+        /* Logo Styling */
+        .logo-container {
+            margin-bottom: 1.5rem;
+        }
 
-    .logo {
-        width: 100px;
-        margin-bottom: 15px;
-    }
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
 
-    h2 {
-        color: #004080;
-        margin-bottom: 20px;
-    }
+        /* Form Controls */
+        .form-group {
+            margin-bottom: 1.25rem;
+            text-align: left;
+        }
 
-    .input-group {
-        margin-bottom: 15px;
-    }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333333;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
 
-    input {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-size: 14px;
-    }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
 
-    button {
-        width: 100%;
-        padding: 12px;
-        border: none;
-        border-radius: 6px;
-        background: #004080;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-    }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #0c3c86; /* Matching KPR's signature blue */
+        }
 
-    button:hover {
-        background: #002d5a;
-    }
+        /* Button Styling */
+        .login-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #0c3c86; /* Primary Blue from Logo */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 0.5rem;
+        }
 
-    .footer {
-        margin-top: 15px;
-        font-size: 12px;
-        color: #666;
-    }
-</style>
+        .login-btn:hover {
+            background-color: #082a5e;
+        }
+
+        /* Utilities */
+        .forgot-password {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #555;
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+            color: #0c3c86;
+        }
+    </style>
 </head>
 <body>
 
-<div class="login-container">
-    <img src="college-logo.png" alt="College Logo" class="logo">
-
-    <h2>College Login</h2>
-
-    <form>
-        <div class="input-group">
-            <input type="text" placeholder="Student ID" required>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="download.jpg" alt="KPRCAS Logo">
         </div>
 
-        <div class="input-group">
-            <input type="password" placeholder="Password" required>
-        </div>
+        <form>
+            <div class="form-group">
+                <label for="username">Username / Email</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
 
-        <button type="submit">Login</button>
-    </form>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
 
-    <div class="footer">
-        © 2026 Your College Name
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <a href="#" class="forgot-password">Forgot Password?</a>
     </div>
-</div>
 
 </body>
 </html>
+
